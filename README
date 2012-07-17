@@ -1,0 +1,13 @@
+Apache
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
+Nginx
+
+try_files $uri $uri/ /index.php;
+
+lighttpd
+
+url.rewrite-if-not-file = ("^" => "/index.php")
