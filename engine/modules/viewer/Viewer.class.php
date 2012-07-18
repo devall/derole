@@ -6,7 +6,7 @@ class ModuleViewer extends Module {
   protected $oViewer = null;
 
   public function init() {
-    $oStorage = new FileStorage(dirname(__FILE__).'/tmp/');
+    $oStorage = new FileStorage('./application/cache/views');
     $oViewer = new HamlPHP($oStorage);
     $this->oViewer = $oViewer->getCompiler();
   }

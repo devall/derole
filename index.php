@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 header('Content-Type: text/html; charset=utf-8');
 
-require_once('./engine/classes/Loader.class.php');
+require_once('./engine/loader.php');
 
 $oRouter = new Router();
 $oRouter->exec();
