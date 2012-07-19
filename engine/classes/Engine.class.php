@@ -16,7 +16,7 @@ class Engine {
   }
   public function initModules() {
     foreach($this->aModules as $oModule) {
-      $oModule->Init();
+      $oModule->init();
     }
   }
 
