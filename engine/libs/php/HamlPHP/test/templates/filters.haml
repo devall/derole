@@ -1,0 +1,35 @@
+!!! 5
+%html
+  %head
+    :css
+      body { color: #000; }
+      
+      p {
+        color: #fff;
+      }
+      
+      #container { color: #fff; }
+    :plain
+      %p should not render
+      / neither this
+    
+    :javascript
+      $(function() {
+        function helloWorld() {
+          alert('Hello world');
+        }
+      });
+    :php
+      $variable = 1;
+      
+      function helloWorld() {
+        return 'Hello world';
+      }
+  %body
+    %p test
+    %p
+      :plain
+        %p testing plain
+          nesting
+            nesting
+            = 2 + 2

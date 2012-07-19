@@ -1,0 +1,10 @@
+    #entry
+      %form{:action => 'http://beautyfree.no-ip.org/derole/login', :method => 'post'}
+        %p
+          %input.inup{:type => "text", :onblur => "if (value == '') {value='E-mail'}", :onfocus => "if (value == 'E-mail') {value =''}", :value => "E-mail", :name => "email"}
+        %p
+          %input.inup{:type => "password", :onblur => "if (value == '') {value='Пароль'}", :onfocus => "if (value == 'Пароль') {value =''}", :value => "Пароль", :name => "pass"}
+        %p
+          %input.btn{:type => "submit", :value => "Войти"}
+        %p
+          %input.btn{:type => "button", :value => "Регистрация", :onclick => "window.location='http://beautyfree.no-ip.org/derole/registration'"}
