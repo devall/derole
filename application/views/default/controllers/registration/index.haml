@@ -1,0 +1,24 @@
+    #reg
+      %form{:action => "http://beautyfree.no-ip.org/derole/registration", :method => "post"}
+        %table{:align => "center"}
+          %tr
+            %td{:align => "left", :width => "200"} E-mail:
+            %td
+              %input.inup{:name => "email", :type => "text", :value => "$_POST['email']"}/
+          = err($errm)
+          %tr
+            %td{:align => "left", :width => "200"} Пароль:
+            %td
+              %input.inup{:name => "pass", :type => "password", :value => "name"}/
+          = err($errp)
+          %tr
+            %td{:align => "left", :width => "200"} Повторите пароль:
+            %td
+              %input.inup{:name => "pass2", :type => "password", :value => "name"}/
+        %span
+          %input.inup{:name => "rules", :type => "checkbox"}/
+        Я обязуюсь соблюдать
+        %a{:href => "http://beautyfree.no-ip.org/derole/lib/law", :target => "_blank"}
+          %b Законы игры Test Game
+        = err($errr)
+        %input.btn{:name => "next", :type => "submit", :value => "Дальше"}
